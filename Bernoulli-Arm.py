@@ -1,3 +1,4 @@
+# Libraries Imported
 import random
 import numpy as np
 import pandas as pd
@@ -101,7 +102,7 @@ f.close()
 df = pd.read_csv("e-greedy.csv", sep = "\t", header = None, names = ["epsilon", "simulation_num", "step", "chosen_arm", "reward", "cum_reward"])
 df.head()
 
-# Create a flag for each step to see if best arm was chosen
+# Flag created for each step to see if best arm was chosen
 df["chose_correct"] = np.select(
     [
         df["chosen_arm"] == 2,
