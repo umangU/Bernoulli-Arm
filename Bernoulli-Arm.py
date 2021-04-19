@@ -88,7 +88,7 @@ random.shuffle(means)
 arms = list(map(lambda mu: BernoulliArm(mu), means))
 # print("Best arm is "+ str(ind_max(means)))
 
-f = open("/home/uuliana/Downloads/e-greedy.csv", "w")
+f = open("~/e-greedy.csv", "w")
 
 for epsilon in [0.1, 0.2, 0.3, 0.4, 0.5]:
     algo = EpsilonGreedy(epsilon, [], [])
