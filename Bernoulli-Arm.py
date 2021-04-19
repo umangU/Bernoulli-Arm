@@ -7,9 +7,12 @@ import altair as alt
 # Epsilon Greedy method
 class EpsilonGreedy():
     def __init__(self, epsilon, counts, values):
-        self.epsilon = epsilon # probability of explore
-        self.counts = counts # number of pulls for each arms
-        self.values = values # average amount of reward we've gotten from each arms
+        # Storing the probability of explore
+        self.epsilon = epsilon
+        # Storing the number of pulls for each arms
+        self.counts = counts 
+        # Storing the average amount of reward we've gotten from each arms
+        self.values = values 
         return
 
     def initialize(self, n_arms):
@@ -86,7 +89,6 @@ means = [0.1, 0.1, 0.1, 0.1, 0.9]
 n_arms = len(means)
 random.shuffle(means)
 arms = list(map(lambda mu: BernoulliArm(mu), means))
-# print("Best arm is "+ str(ind_max(means)))
 
 f = open("~/e-greedy.csv", "w")
 
@@ -115,7 +117,7 @@ df["chose_correct"] = np.select(
     ]
 )
 
-# Perform average/mean for each step for all simulations and epsilon
+# Perform mean for each step for all simulations and epsilon
 df_chose_correctly = df.loc[:,["epsilon","step", "chose_correct"]].groupby(["epsilon","step"]).agg("mean")
 
 # Remove multi index grouping
