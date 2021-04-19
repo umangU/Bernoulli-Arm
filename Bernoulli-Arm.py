@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import altair as alt
 
+# Epsilon Greedy method
 class EpsilonGreedy():
     def __init__(self, epsilon, counts, values):
         self.epsilon = epsilon # probability of explore
@@ -35,7 +36,7 @@ class EpsilonGreedy():
         self.values[chosen_arm] = new_value
         return
 
-
+# Bernoulli Arm method
 class BernoulliArm():
     def __init__(self, p):
         self.p = p
