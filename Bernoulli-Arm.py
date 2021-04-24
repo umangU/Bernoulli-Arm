@@ -50,7 +50,7 @@ class BernoulliArm():
         else:
             return 1.0
 
-
+# Test Algorithm
 def test_algorithm(algo, arms, num_sims, horizon):
     chosen_arms = [0.0 for i in range(num_sims * horizon)]
     rewards = [0.0 for i in range(num_sims * horizon)]
