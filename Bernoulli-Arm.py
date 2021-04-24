@@ -1,10 +1,10 @@
-# Libraries Imported
+# Relevant Libraries Imported
 import random
 import numpy as np
 import pandas as pd
 import altair as alt
 
-# Epsilon Greedy method
+# Epsilon Greedy method Implementation
 class EpsilonGreedy():
     def __init__(self, epsilon, counts, values):
         # Storing the probability of explore
