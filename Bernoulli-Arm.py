@@ -39,7 +39,7 @@ class EpsilonGreedy():
         self.values[chosen_arm] = new_value
         return
 
-# Bernoulli Arm method
+# Bernoulli Arm Method Implementation
 class BernoulliArm():
     def __init__(self, p):
         self.p = p
