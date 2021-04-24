@@ -117,10 +117,10 @@ df["chose_correct"] = np.select(
     ]
 )
 
-# Perform mean for each step for all simulations and epsilon
+# Mean for each step for all simulations and epsilon
 df_chose_correctly = df.loc[:,["epsilon","step", "chose_correct"]].groupby(["epsilon","step"]).agg("mean")
 
-# Remove multi index grouping
+# Multi index grouping
 df_chose_correctly = df_chose_correctly.reset_index()
 
 alt.Chart(df_chose_correctly).mark_line().encode(
